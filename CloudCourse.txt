@@ -217,6 +217,7 @@ DevOps: Tools
 		https://www.toolsqa.com/git/git-tutorial/
 		https://www.tutorialspoint.com/git/index.htm
 		https://www.w3schools.com/git/
+		https://www.atlassian.com/git/tutorials/saving-changes/git-commit
 	3.Git Hub:
 		https://www.w3schools.com/whatis/whatis_github.asp
 	4.Ansible:
