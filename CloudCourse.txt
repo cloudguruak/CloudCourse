@@ -1,0 +1,609 @@
+Course to complete:
+Linux:Basic Linux Commands
+-----------------------------------------------------------------------------------
+The 40 Most Commonly Used Linux Commands
+1. sudo command
+2. pwd command
+3. cd command
+4. ls command
+5. cat command
+6. cp command
+7. mv command
+8. mkdir command
+9. rmdir command
+10. rm command
+11. touch command
+12. locate command
+13. find command
+14. grep command
+15. df command
+16. du command
+17. head command
+18. tail command
+19. diff command
+20. tar command
+21. chmod command
+22. chown command
+23. jobs command
+24. kill command
+25. ping command
+26. wget command
+27. uname command
+28. top command
+29. history command
+30. man command
+31. echo command
+32. zip, unzip commands
+33. hostname command
+34. useradd, userdel commands
+35. apt-get command
+36. nano, vi, jed commands
+37. alias, unalias commands
+38. su command
+39. htop command
+40. ps command
+---------------------------------------------------------------------------------------------------------------------
+Top 50 Linux Commands You Must Know as a Regular User
+1.ls - The most frequently used command in Linux to list directories
+
+2.pwd - Print working directory command in Linux
+	
+3.cd - Linux command to navigate through directories
+	root@ubuntu:~# cd <directory path>
+4.mkdir - Command used to create directories in Linux
+	root@ubuntu:~# mkdir <folder name>
+5.mv - Move or rename files in Linux
+	root@ubuntu:~# mv <source> <destination
+6.cp - Similar usage as mv but for copying files in Linux
+	root@ubuntu:~# cp <source> <destination>
+7.rm - Delete files or directories
+	root@ubuntu:~# rm <file name>
+	root@ubuntu:~# rm -r <folder/directory name>
+8.touch - Create blank/empty files
+	root@ubuntu:~# touch <file name>
+9.ln - Create symbolic links (shortcuts) to other files
+	root@ubuntu:~# ln -s <source path> <link name>
+10.cat - Display file contents on the terminal
+	root@ubuntu:~# cat <file name>
+11.clear - Clear the terminal display
+	root@ubuntu:~# Clear
+12.echo - Print any text that follows the command
+	root@ubuntu:~# echo <Text to print on terminal>
+13.less - Linux command to display paged outputs in the terminal
+	root@ubuntu:~# cat /boot/grub/grub.cfg  | less
+14.man - Access manual pages for all Linux commands
+	root@ubuntu:~# man <command>
+15.uname - Linux command to get basic information about the OS
+	root@ubuntu:~# uname -a
+16.whoami - Get the active username
+17.tar - Command to extract and compress files in Linux
+	#Compress
+	root@ubuntu:~# tar -cvf <archive name> <files seperated by space>
+	#Extract
+	root@ubuntu:~# tar -xvf <archive name>
+18.grep - Search for a string within an output
+	root@ubuntu:~# <Any command with output> | grep "<string to find>"
+19.head - Return the specified number of lines from the top
+	root@ubuntu:~# head <file name>
+
+20.tail - Return the specified number of lines from the bottom
+	root@ubuntu:~# tail <file name>
+21.diff - Find the difference between two files
+	root@ubuntu:~# diff <file 1> <file 2>
+22.cmp - Allows you to check if two files are identical
+	root@ubuntu:~# cmp <file 1> <file 2>
+23.comm - Combines the functionality of diff and cmp
+	root@ubuntu:~# comm <file 1> <file2>
+24.sort - Linux command to sort the content of a file while outputting
+	root@ubuntu:~# sort <filename>
+25.export - Export environment variables in Linux
+	root@ubuntu:~# export <variable name>=<value>
+26.zip - Zip files in Linux
+	root@ubuntu:~# zip <archive name> <file names separated by space>
+27.unzip - Unzip files in Linux
+	root@ubuntu:~# unzip <archive name>
+28.ssh - Secure Shell command in Linux
+	root@ubuntu:~ -->> ssh username@hostname
+29.service - Linux command to start and stop services
+	root@ubuntu:~ -->> service ssh status
+	root@ubuntu:~ -->> service ssh stop
+	root@ubuntu:~ -->> service ssh start
+30.ps - Display active processes
+	root@ubuntu:~ -->> ps 
+31.kill and killall - Kill active processes by process ID or name
+	root@ubuntu:~ -->> kill <process ID>
+	root@ubuntu:~ -->> killall <process name>
+32.df - Display disk filesystem information
+	root@ubuntu:~ -->> df -h
+33.mount - Mount file systems in Linux
+	root@ubuntu:~ -->> mount /dev/cdrom /mnt
+34.chmod - Command to change file permissions
+	root@ubuntu:~ -->> chmod +x loop.sh
+35.chown - Command for granting ownership of files or folders
+	root@ubuntu:~ -->> chmod root:root loop.sh
+36.ifconfig - Display network interfaces and IP addresses
+	root@ubuntu:~ -->> ifconfig
+37.traceroute - Trace all the network hops to reach the destination
+	root@ubuntu:~ -->> traceroute <destination address>
+38.wget - Direct download files from the internet
+	root@ubuntu:~ -->> wget <link to file>
+		OR
+	root@ubuntu:~ -->> wget -c <link to file>
+39.ufw - Firewall command
+	root@ubuntu:~# ufw allow 80
+40.iptables - Base firewall for all other firewall utilities to interface with
+	root@ubuntu:~# iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+41.apt, pacman, yum, rpm - Package managers depending on the distro
+*	Debian and Debian-based distros - apt install <package name>
+*	Arch and Arch-based distros - pacman -S <package name>
+*	Red Hat and Red Hat-based distros - yum install <package name>
+*	Fedora and CentOS - yum install <package>
+42.sudo - Command to escalate privileges in Linux
+	non-root-user@ubuntu:~# sudo <command you want to run>
+	Password:
+43.cal - View a command-line calendar
+	root@ubuntu:~# cal
+	root@ubuntu:~# cal May 2019
+44.alias - Create custom shortcuts for your regularly used commands
+	root@ubuntu:~# alias lsl="ls -l"
+		OR
+	root@ubuntu:~# alias rmd="rm -r"	
+
+45.dd - Majorly used for creating bootable USB sticks
+	root@ubuntu:~# dd if = /dev/sdb of = /dev/sda
+46.whereis - Locate the binary, source, and manual pages for a command
+	root@ubuntu:~# whereis sudo
+	sudo: /usr/bin/sudo /usr/lib/sudo /usr/share/man/man8/sudo.8.gz
+47.whatis - Find what a command is used for
+	root@ubuntu:~# whatis sudo
+	sudo (8) - execute a command as another user
+48.top - View active processes live with their system usage
+*
+49.useradd and usermod - Add new user or change existing users data
+	root@ubuntu:~# useradd JournalDev -d /home/JD
+	root@ubuntu:~# usermod JournalDev -a -G sudo, audio, mysql
+50.passwd - Create or update passwords for existing users
+	root@ubuntu:~# passwd
+	New password:
+--------------------------------------------------------------
+Bonus Tips and Tricks
+Here are some tips and tricks you can use to manage the Linux system:
+
+Enter the clear command to clean the Terminal screen.
+Press the Tab button to autofill after entering a command with an argument.
+Use Ctrl + C to terminate a running command.
+Press Ctrl + Z to pause a working command.
+Use Ctrl + S to freeze your Terminal temporarily.
+Press Ctrl + Q to undo the Terminal freeze.
+Use Ctrl + A to move to the beginning of the line.
+Press Ctrl + E to bring you to the end of the line.
+When executing multiple commands in a single line, use (;) to separate them. 
+Alternatively, use && to only allow the next command to run if the previous one is successful.
+
+---------------------------------------------------------------------------------------------------------
+Python: Basic Coding and Commands
+</> Python Tutorial
+https://skillpundit.com/python/index.php
+https://www.programiz.com/python-programming/for-loop
+https://www.w3schools.com/python/default.asp
+Introduction
+Variables
+Comments & Identifiers
+Operators
+List
+Tuples
+Dictionary
+Sets
+Conditional Statement
+Control Statement
+Continue Statement
+Break
+Pass
+Strings
+Arrays
+Functions
+
+---------------------------------------------------------------------------------------
+AWS: Practitioner Certification
+Azure:
+
+DevOps: Tools
+	1.Jenkins:Continuous Integration (CI) / Continuous Delivery (CD) concepts
+		https://www.jenkins.io/doc/
+		https://www.jenkins.io/doc/tutorials/
+		https://www.jenkins.io/doc/pipeline/tour/hello-world/
+		https://www.toolsqa.com/jenkins/jenkins-pipeline/
+		https://www.freecodecamp.org/news/learn-jenkins-by-building-a-ci-cd-pipeline/
+
+	2.Git: distributed version control system
+		https://www.atlassian.com/git/tutorials
+		https://www.toolsqa.com/git/git-tutorial/
+		https://www.tutorialspoint.com/git/index.htm
+		https://www.w3schools.com/git/
+
+
+	Git is a distributed version control system that helps developers collaborate on projects of any scale.
+
+Linus Torvalds, the developer of the Linux kernel, created Git in 2005 to help control the Linux kernel's development.
+
+What is a Distributed Version Control System?
+A distributed version control system is a system that helps you keep track of changes you've made to files in your project.
+
+This change history lives on your local machine and lets you revert to a previous version of your project with ease in case something goes wrong.
+
+Git makes collaboration easy. Everyone on the team can keep a full backup of the repositories they're working on on their local machine. Then, thanks to an external server like BitBucket, GitHub or GitLab, they can safely store the repository in a single place.
+
+This way, different members of the team can copy it locally and everyone has a clear overview of all changes made by the whole team.
+
+Git has many different commands you can use. And I've found that these fifty are the ones I use the most often (and are therefore the most helpful to remember).
+
+So I have written them down and thought it'd be nice to share them with the community. I hope you find them useful – Enjoy.
+
+
+
+How to check your Git configuration:
+The command below returns a list of information about your git configuration including user name and email:
+
+	git config -l
+
+How to setup your Git username:
+With the command below you can configure your user name:
+
+	git config --global user.name "Fabio"
+
+How to setup your Git user email:
+This command lets you setup the user email address you'll use in your commits.
+
+	git config --global user.email "signups@fabiopacifici.com"
+
+How to cache your login credentials in Git:
+You can store login credentials in the cache so you don't have to type them in each time. Just use this command:
+
+	git config --global credential.helper cache
+
+How to initialize a Git repo:
+Everything starts from here. The first step is to initialize a new Git repo locally in your project root. You can do so with the command below:
+
+	git init
+
+How to add a file to the staging area in Git:
+The command below will add a file to the staging area. Just replace filename_here with the name of the file you want to add to the staging area.
+
+	git add filename_here
+
+How to add all files in the staging area in Git
+If you want to add all files in your project to the staging area, you can use a wildcard . and every file will be added for you.
+
+	git add .
+
+How to add only certain files to the staging area in Git
+With the asterisk in the command below, you can add all files starting with 'fil' in the staging area.
+
+	git add fil*
+
+How to check a repository's status in Git:
+This command will show the status of the current repository including staged, unstaged, and untracked files.
+
+	git status
+
+How to commit changes in the editor in Git:
+This command will open a text editor in the terminal where you can write a full commit message.
+
+A commit message is made up of a short summary of changes, an empty line, and a full description of the changes after it.
+
+	git commit
+
+How to commit changes with a message in Git:
+You can add a commit message without opening the editor. This command lets you only specify a short summary for your commit message.
+
+	git commit -m "your commit message here"
+
+How to commit changes (and skip the staging area) in Git:
+You can add and commit tracked files with a single command by using the -a and -m options.
+
+	git commit -a -m"your commit message here"
+
+How to see your commit history in Git:
+This command shows the commit history for the current repository:
+
+	git log
+
+How to see your commit history including changes in Git:
+This command shows the commit's history including all files and their changes:
+
+	git log -p
+
+How to see a specific commit in Git:
+This command shows a specific commit.
+
+Replace commit-id with the id of the commit that you find in the commit log after the word commit.
+
+	git show commit-id
+
+How to see log stats in Git:
+This command will cause the Git log to show some statistics about the changes in each commit, including line(s) changed and file names.
+
+	git log --stat
+
+How to see changes made before committing them using "diff" in Git:
+You can pass a file as a parameter to only see changes on a specific file.
+git diff shows only unstaged changes by default.
+
+We can call diff with the --staged flag to see any staged changes.
+
+	git diff
+	git diff all_checks.py
+	git diff --staged
+
+How to see changes using "git add -p":
+This command opens a prompt and asks if you want to stage changes or not, and includes other options.
+
+	git add -p
+
+How to remove tracked files from the current working tree in Git:
+This command expects a commit message to explain why the file was deleted.
+
+	git rm filename
+
+How to rename files in Git:
+This command stages the changes, then it expects a commit message.
+
+	git mv oldfile newfile
+
+How to ignore files in Git:
+Create a .gitignore file and commit it.
+
+How to revert unstaged changes in Git:
+
+	git checkout filename
+
+How to revert staged changes in Git:
+You can use the -p option flag to specify the changes you want to reset.
+
+	git reset HEAD filename
+	git reset HEAD -p
+
+How to amend the most recent commit in Git:
+git commit --amend allows you to modify and add changes to the most recent commit.
+
+	git commit --amend
+
+!!Note!!: fixing up a local commit with amend is great and you can push it to a shared repository after you've fixed it. But you should avoid amending commits that have already been made public.
+
+How to rollback the last commit in Git:
+git revert will create a new commit that is the opposite of everything in the given commit.
+We can revert the latest commit by using the head alias like this:
+
+	git revert HEAD
+
+
+How to rollback an old commit in Git:
+You can revert an old commit using its commit id. This opens the editor so you can add a commit message.
+
+	git revert comit_id_here
+
+How to create a new branch in Git:
+By default, you have one branch, the main branch. With this command, you can create a new branch. Git won't switch to it automatically – you will need to do it manually with the next command.
+
+	git branch branch_name
+
+How to switch to a newly created branch in Git:
+When you want to use a different or a newly created branch you can use this command:
+
+	git checkout branch_name
+
+How to list branches in Git:
+You can view all created branches using the git branch command. It will show a list of all branches and mark the current branch with an asterisk and highlight it in green.
+
+	git branch
+
+How to create a branch in Git and switch to it immediately:
+In a single command, you can create and switch to a new branch right away.
+
+	git checkout -b branch_name
+
+How to delete a branch in 
+When you are done working with a branch and have merged it, you can delete it using the command below:
+
+	git branch -d branch_name
+
+How to merge two branches in Git:
+To merge the history of the branch you are currently in with the branch_name, you will need to use the command below:
+
+	git merge branch_name
+
+How to show the commit log as a graph in Git:
+We can use --graph to get the commit log to show as a graph. Also,
+--oneline will limit commit messages to a single line.
+
+	git log --graph --oneline
+
+How to show the commit log as a graph of all branches in Git:
+Does the same as the command above, but for all branches.
+
+	git log --graph --oneline --all
+
+How to abort a conflicting merge in Git:
+If you want to throw a merge away and start over, you can run the following command:
+
+	git merge --abort
+
+How to add a remote repository in Git
+This command adds a remote repository to your local repository (just replace https://repo_here with your remote repo URL).
+
+	git add remote https://repo_here
+
+How to see remote URLs in Git:
+You can see all remote repositories for your local repository with this command:
+
+	git remote -v
+
+How to get more info about a remote repo in Git:
+Just replace origin with the name of the remote obtained by
+running the git remote -v command.
+
+	git remote show origin
+
+How to push changes to a remote repo in Git:
+When all your work is ready to be saved on a remote repository, you can push all changes using the command below:
+
+	git push
+
+How to pull changes from a remote repo in Git:
+If other team members are working on your repository, you can retrieve the latest changes made to the remote repository with the command below:
+
+	git pull
+
+How to check remote branches that Git is tracking:
+This command shows the name of all remote branches that Git is tracking for the current repository:
+
+	git branch -r
+
+How to fetch remote repo changes in Git:
+This command will download the changes from a remote repo but will not perform a merge on your local branch (as git pull does that instead).
+
+	git fetch
+
+How to check the current commits log of a remote repo in Git
+Commit after commit, Git builds up a log. You can find out the remote repository log by using this command:
+
+	git log origin/main
+
+How to merge a remote repo with your local repo in Git:
+If the remote repository has changes you want to merge with your local, then this command will do that for you:
+
+	git merge origin/main
+
+How to get the contents of remote branches in Git without automatically merging:
+This lets you update the remote without merging any content into the
+local branches. You can call git merge or git checkout to do the merge.
+
+	git remote update
+
+How to push a new branch to a remote repo in Git:
+If you want to push a branch to a remote repository you can use the command below. Just remember to add -u to create the branch upstream:
+
+	git push -u origin branch_name
+
+How to remove a remote branch in Git:
+If you no longer need a remote branch you can remove it using the command below:
+
+	git push --delete origin branch_name_here
+
+How to use Git rebase:
+You can transfer completed work from one branch to another using git rebase.
+
+	git rebase branch_name_here
+
+Git Rebase can get really messy if you don't do it properly. Before using this command I suggest that you re-read the official documentation here
+
+How to run rebase interactively in Git:
+You can run git rebase interactively using the -i flag.
+It will open the editor and present a set of commands you can use.
+
+	git rebase -i master
+	# p, pick = use commit
+	# r, reword = use commit, but edit the commit message
+	# e, edit = use commit, but stop for amending
+	# s, squash = use commit, but meld into previous commit
+	# f, fixup = like "squash", but discard this commit's log message
+	# x, exec = run command (the rest of the line) using shell
+	# d, drop = remove commit
+
+How to force a push request in Git:
+This command will force a push request. This is usually fine for pull request branches because nobody else should have cloned them.
+But this isn't something that you want to do with public repos.
+
+	git push -f
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+	3.Git Hub:SCM (Source Code Managment)
+		https://www.w3schools.com/whatis/whatis_github.asp
+	4.Ansible/Puppet/Chef:Configuration Managment
+	5.Docker/Kubernetes:Container Platforms
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/home/cloudguruak/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/cloudguruak/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/cloudguruak/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/cloudguruak/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.9.1)
+  compose*    Docker Compose (Docker Inc., v2.12.0)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  dev*        Docker Dev Environments (Docker Inc., v0.0.3)
+  extension*  Manages Docker extensions (Docker Inc., v0.2.13)
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.21.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+	6.Terraform: Is an Infrastructure as Code
+
