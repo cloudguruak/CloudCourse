@@ -605,5 +605,7 @@ Commands:
   update      Update configuration of one or more containers
   version     Show the Docker version information
   wait        Block until one or more containers stop, then print their exit codes
+
+---------------------------------------------------------------------------------------------------------------------------
 	6.Terraform: Is an Infrastructure as Code
 
